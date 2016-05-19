@@ -6,6 +6,16 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    firebase: 'https://buyacaramba.firebaseio.com/',
+    torii: {
+      sessionServiceName: 'session'
+    },
+    contentSecurityPolicy: {
+      'style-src': '\'self\' \'unsafe-inline\' fonts.googleapis.com',
+      'font-src': '\'self\' fonts.gstatic.com',
+      'img-src': '\'self\' *.gravatar.com s3.amazonaws.com',
+      'connect-src': '\'self\' wss://*.firebaseio.com https://auth.firebase.com'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
